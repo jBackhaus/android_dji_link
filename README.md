@@ -7,6 +7,9 @@ The Android device and your ROS-System have to be part of the same network. UDP-
 
 This Android application connects to any compatible DJI-UAV via the DJI Mobile SDK. It is necessary to claim a "DJI Mobile SDK API key" and a "Google Maps API key" to run this application. Both have to be stored as a string-resource.
 
+---
+## Installation of API-Keys
+
 To store the DJI key, create a xml-file with the following content in the folder /app/src/debug/res/values/:
 
 ```
@@ -19,8 +22,6 @@ To release your app, copy the same file in the folder /app/src/release/res/value
 
 The same procedure is used for the GoogleMaps API key. Here, the string name has to be "google_maps_key".
 
-In the current version missions can also be created on the tablet directly. Do not use this feature, if a ROS:DJILink instance is connected!
-
 ---
 
 ## Concept
@@ -29,7 +30,7 @@ In the current version missions can also be created on the tablet directly. Do n
 
 ---
 
-## Connections
+## WLAN-Connections
 
 ### UDP-Connection
 Used to transmit the following data via MAVLink:
