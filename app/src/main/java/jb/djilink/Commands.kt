@@ -1,5 +1,7 @@
 package jb.djilink
-
+/**
+ *Created by Jan Backhaus on 12.12.18 as part of the project android_dji_link.
+ */
 import android.location.Location
 import android.util.Log
 import dji.common.flightcontroller.LocationCoordinate3D
@@ -10,9 +12,7 @@ import java.io.File
 import java.io.FileOutputStream
 
 
-/**
- * Created by jan on 05.10.17.
- */
+
 
 //Berechnungen und Befehl zum Anpassen von (Datums-)Strings auf definierte Länge "1" -> "01"
 

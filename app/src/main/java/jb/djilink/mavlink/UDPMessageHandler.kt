@@ -1,5 +1,7 @@
 package jb.djilink.mavlink
-
+/**
+ *Created by Jan Backhaus on 12.12.18 as part of the project android_dji_link.
+ */
 import android.os.Handler
 import android.os.Message
 import com.MAVLink.MAVLinkPacket
@@ -16,9 +18,6 @@ import dji.common.mission.waypoint.WaypointMissionState
 import jb.djilink.*
 import kotlinx.android.synthetic.main.layout.*
 
-/**
- * Created by jan on 02.11.17.
- */
 class UDPMessageHandler(private val mavLink: MavLinkConnection, looper: Looper) : Handler(looper) {     //enthält alle Funktionen für den UDPMessageThread
     var mavLinkPacket: MAVLinkPacket? = null
     var parser = Parser()

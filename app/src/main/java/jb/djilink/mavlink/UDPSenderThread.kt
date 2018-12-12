@@ -1,5 +1,7 @@
 package jb.djilink.mavlink
-
+/**
+ *Created by Jan Backhaus on 12.12.18 as part of the project android_dji_link.
+ */
 import android.os.Handler
 import android.os.HandlerThread
 import android.os.Message
@@ -9,9 +11,7 @@ import jb.djilink.*
 
 import java.net.*
 
-/**
- * Created by jan on 01.11.17.
- */
+
 class UDPSenderThread(private var udpMessageHandler: UDPMessageHandler, val parent: MavLinkConnection): HandlerThread("UDPSenderThread") {
         //Thread zum Versenden von MAVLink-Nachrichten
 

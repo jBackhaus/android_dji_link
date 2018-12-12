@@ -1,14 +1,14 @@
 package jb.djilink.mavlink
-
+/**
+ *Created by Jan Backhaus on 12.12.18 as part of the project android_dji_link.
+ */
 import com.MAVLink.enums.MAV_MISSION_RESULT
 import android.os.Handler
 import android.os.HandlerThread
 import jb.djilink.*
 import kotlinx.android.synthetic.main.layout.*
 
-/**
- * Created by jan on 23.11.17.
- */
+
 class WaypointTransmission(private val targetSystem: Short, private val targetComponent: Short, private val numberOfWaypoints: Int, private val mavLink: MavLinkConnection, private val receive: Boolean): HandlerThread("WaypointTransmission") {
 
     //numberOfWaypoints ist nur bei "Receive" nötig, da hier die Anzahl der abzufordernden Wegpunkte von der GCS mitgeteilt wurde.

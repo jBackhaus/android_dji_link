@@ -1,8 +1,10 @@
 package jb.djilink.mavlink
-import com.MAVLink.enums.*
+
 /**
- * Created by jan on 02.11.17.
+ *Created by Jan Backhaus on 12.12.18 as part of the project android_dji_link.
  */
+import com.MAVLink.enums.*
+
 
 //Derzeit nicht genutzte Umwandlung von MAVLink-Enums in Strings
 

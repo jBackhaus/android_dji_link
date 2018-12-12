@@ -1,7 +1,7 @@
 package jb.djilink
 
 /**
- * Created by jan on 12.12.17.
+ *Created by Jan Backhaus on 12.12.18 as part of the project android_dji_link.
  */
 
 //Berechnet Bitmap ZUm Status

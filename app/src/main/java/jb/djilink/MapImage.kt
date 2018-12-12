@@ -1,5 +1,7 @@
 package jb.djilink
-
+/**
+ *Created by Jan Backhaus on 12.12.18 as part of the project android_dji_link.
+ */
 import android.util.Log
 import com.google.android.gms.maps.model.*
 import dji.common.flightcontroller.LocationCoordinate3D

@@ -1,5 +1,7 @@
 package jb.djilink.dji
-
+/**
+ *Created by Jan Backhaus on 12.12.18 as part of the project android_dji_link.
+ */
 import android.util.Log
 import dji.common.camera.SettingsDefinitions
 import dji.common.flightcontroller.FlightControllerState
@@ -25,9 +27,7 @@ import java.lang.System.currentTimeMillis
 import kotlin.math.*
 
 
-/**
- * Created by jan on 07.12.17.
- */
+
 class DJIDrone (var djiController: DJIController, var product: BaseProduct) {       //Drohnenklasse mit eigenen Funktionen und Listenern
     var camera: dji.sdk.camera.Camera? = null
     var gimbal: Gimbal? = null

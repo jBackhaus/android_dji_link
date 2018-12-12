@@ -1,5 +1,7 @@
 package jb.djilink
-
+/**
+ *Created by Jan Backhaus on 12.12.18 as part of the project android_dji_link.
+ */
 import android.Manifest
 import android.content.BroadcastReceiver
 import android.content.Context

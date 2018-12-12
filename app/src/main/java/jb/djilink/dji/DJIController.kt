@@ -16,7 +16,7 @@ import jb.djilink.FLAG_CONNECTION_CHANGE
 import jb.djilink.MainActivity
 
 /**
- * Created by jan on 07.12.17.
+ *Created by Jan Backhaus on 12.12.18 as part of the project android_dji_link.
  */
 class DJIController(var main: MainActivity) {       //Stellt die Verbindung zur Drohne her, registiert App
 

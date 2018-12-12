@@ -1,5 +1,7 @@
 package jb.djilink.mavlink
-
+/**
+ *Created by Jan Backhaus on 12.12.18 as part of the project android_dji_link.
+ */
 import com.MAVLink.enums.MAV_SYS_STATUS_SENSOR.*
 import com.MAVLink.enums.MAV_PROTOCOL_CAPABILITY.*
 import dji.common.model.LocationCoordinate2D
@@ -7,9 +9,7 @@ import jb.djilink.MainActivity
 import jb.djilink.dji.DJIDrone
 import kotlin.math.roundToInt
 
-/**
- * Created by jan on 21.11.17.
- */
+
 
 //Derzeit globale Funktionen zur Bestimmung der Bitmaps von Status und Fähigkeiten
 

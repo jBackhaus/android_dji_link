@@ -1,9 +1,8 @@
 package jb.djilink.mavlink
-
-import com.MAVLink.common.*
 /**
- * Created by jan on 23.11.17.
+ *Created by Jan Backhaus on 12.12.18 as part of the project android_dji_link.
  */
+import com.MAVLink.common.*
 
 class MavlinkWaypoint(msg: msg_mission_item){       //Klasse, die zur Umwandlung benötigt wird
     var command: Short = msg.command.toShort()

@@ -1,14 +1,13 @@
 package jb.djilink.mavlink
-
+/**
+ *Created by Jan Backhaus on 12.12.18 as part of the project android_dji_link.
+ */
 import android.os.Message
 import java.io.IOException
 import java.net.*
 
 import jb.djilink.*
 
-/**
- * Created by jan on 01.11.17.
- */
 class UDPReceiverThread(var handler: UDPMessageHandler, var parent: MavLinkConnection, var port: Int) : Thread("UDPReceiverThread") {
     //Lesen des Eingangs auf dem UDP-Socket in einen Buffer. Bei Empfang, Übergabe per Intent an UDPMessageThread zur Interpretation
     override fun run() {

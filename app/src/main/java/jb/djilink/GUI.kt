@@ -1,5 +1,7 @@
 package jb.djilink
-
+/**
+ *Created by Jan Backhaus on 12.12.18 as part of the project android_dji_link.
+ */
 import android.content.Context
 import android.content.Intent
 import android.graphics.Color
@@ -24,9 +26,6 @@ import dji.common.mission.waypoint.Waypoint
 import dji.sdk.base.BaseProduct
 
 
-/**
- * Created by jan on 12.09.17.
- */
 
 
 

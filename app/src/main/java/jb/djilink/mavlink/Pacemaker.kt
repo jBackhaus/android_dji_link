@@ -1,12 +1,12 @@
 package jb.djilink.mavlink
-
+/**
+ *Created by Jan Backhaus on 12.12.18 as part of the project android_dji_link.
+ */
 import android.os.Handler
 import android.os.HandlerThread
 import jb.djilink.*
 
-/**
- * Created by jan on 07.11.17.
- */
+
 class Pacemaker(var mavLink: MavLinkConnection): HandlerThread("Pacemaker"){
 
     var heartbeatRunning = false                   //Variable, die angibt, ob der sekündliche Aufruf gestoppt werden soll. 2. Sicherheitsebene, da asynchrone Zugriffe nicht ausgeschlossen werden können.

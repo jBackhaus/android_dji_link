@@ -1,5 +1,7 @@
 package jb.djilink.dji
-
+/**
+ *Created by Jan Backhaus on 12.12.18 as part of the project android_dji_link.
+ */
 import android.os.Handler
 import android.os.HandlerThread
 import android.util.Log
@@ -7,9 +9,7 @@ import dji.sdk.camera.MediaFile
 import jb.djilink.DISTANCE_BETWEEN_PHOTOS
 import jb.djilink.calculateDistance
 
-/**
- * Created by jan on 05.10.17.
- */
+
 
 class DJIDownloadThread (djiController: DJIController) :HandlerThread("DJIDownloadThread") {        //Auf diesem Thread laufen die Download-Prozesse der Bilder von der Drohne zum Tablet
     lateinit var downloadHandler: Handler

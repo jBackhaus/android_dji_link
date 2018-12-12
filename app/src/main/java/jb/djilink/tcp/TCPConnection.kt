@@ -1,5 +1,7 @@
 package jb.djilink.mavlink
-
+/**
+ *Created by Jan Backhaus on 12.12.18 as part of the project android_dji_link.
+ */
 import android.content.Intent
 import android.os.Handler
 import android.os.HandlerThread
@@ -13,9 +15,7 @@ import java.io.OutputStream
 import java.net.InetAddress
 import java.net.Socket
 
-/**
- * Created by jan on 01.11.17.
- */
+
 class TCPConnection(val main: MainActivity): HandlerThread("TCPConnection") {
     //Thread zum Versenden von Bilddateien über TCP
 

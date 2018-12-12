@@ -1,14 +1,14 @@
 package jb.djilink
-
+/**
+ *Created by Jan Backhaus on 12.12.18 as part of the project android_dji_link.
+ */
 import com.MAVLink.enums.MAV_AUTOPILOT
 import com.MAVLink.enums.MAV_COMPONENT
 import com.MAVLink.enums.MAV_STATE
 import com.MAVLink.enums.MAV_TYPE
 import dji.common.mission.waypoint.WaypointMissionFinishedAction
 
-/**
- * Created by jan on 05.10.17.
- */
+
 
 //Zustandsvariablen, nicht ändern
 var DOWNLOAD_IMAGES = false

@@ -1,5 +1,7 @@
 package jb.djilink
-
+/**
+ *Created by Jan Backhaus on 12.12.18 as part of the project android_dji_link.
+ */
 import android.app.Activity
 import android.content.BroadcastReceiver
 import android.content.Context
@@ -12,9 +14,7 @@ import android.util.Log
 import android.view.View
 import kotlinx.android.synthetic.main.settings.*
 
-/**
- * Created by jan on 10.11.17.
- */
+
 class SettingsActivity : View.OnClickListener, TextWatcher, Activity() {
 
     //zeigt Einstellungsseite

@@ -1,14 +1,14 @@
 package jb.djilink
-
+/**
+ *Created by Jan Backhaus on 12.12.18 as part of the project android_dji_link.
+ */
 import android.util.Log
 import java.io.File
 import java.io.FileOutputStream
 import java.io.OutputStreamWriter
 import java.util.*
 
-/**
- * Created by jan on 14.11.17.
- */
+
 class UpLogger(var main: MainActivity) {        //Logger für den SMB-Upload
     var directory: String? = null
     var file: File? = null

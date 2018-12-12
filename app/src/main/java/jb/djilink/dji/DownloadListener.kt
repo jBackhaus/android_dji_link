@@ -1,5 +1,7 @@
 package jb.djilink.dji
-
+/**
+ *Created by Jan Backhaus on 12.12.18 as part of the project android_dji_link.
+ */
 import android.graphics.Bitmap
 import android.util.Log
 import android.view.View
@@ -7,9 +9,7 @@ import dji.common.error.DJIError
 import dji.sdk.camera.DownloadListener
 import dji.sdk.camera.MediaFile
 
-/**
- * Created by jan on 05.10.17.
- */
+
 class DownloadListener (var download: DownloadProcess) : DownloadListener<String> {     //Downloadfortschritt-Listener
     var main = download.main
 

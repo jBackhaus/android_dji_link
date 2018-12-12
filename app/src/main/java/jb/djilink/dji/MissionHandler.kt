@@ -1,5 +1,7 @@
 package jb.djilink.dji
-
+/**
+ *Created by Jan Backhaus on 12.12.18 as part of the project android_dji_link.
+ */
 import android.util.Log
 import android.view.View
 import com.MAVLink.enums.MAV_CMD
@@ -13,9 +15,7 @@ import jb.djilink.mavlink.MavlinkWaypoint
 import kotlinx.android.synthetic.main.layout.*
 
 
-/**
- * Created by jan on 10.10.17.
- */
+
 class MissionHandler(var djiController: DJIController) {
     var main = djiController.main
     var waypointList: MutableList<Waypoint>? = null
@@ -169,7 +169,7 @@ class MissionHandler(var djiController: DJIController) {
 
 
     fun buildMavlinkMissionFromDJIMission(djiMission: WaypointMission){
-
+        //Todo
     }
 
 

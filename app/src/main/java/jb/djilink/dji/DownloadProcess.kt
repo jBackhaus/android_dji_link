@@ -1,5 +1,7 @@
 package jb.djilink.dji
-
+/**
+ *Created by Jan Backhaus on 12.12.18 as part of the project android_dji_link.
+ */
 import android.os.Handler
 import android.util.Log
 import android.view.View
@@ -8,9 +10,7 @@ import dji.sdk.camera.MediaFile
 import jb.djilink.*
 import java.lang.System.currentTimeMillis
 
-/**
- * Created by jan on 11.01.18.
- */
+
 class DownloadProcess(var downloadThread: DJIDownloadThread) {      //Verwaltet Doenload und Logging-Daten
 
     var main = downloadThread.main
@@ -125,8 +125,6 @@ class DownloadProcess(var downloadThread: DJIDownloadThread) {      //Verwaltet 
 
         if (TCP_UPLOAD){
             main.tcpConnection.addImageToList(filename)
-        }else if (DROPBOX_UPLOAD) {
-            main.dropbox.uploadToDropbox(filename)
         }
 
         if (SHOW_THUMBNAILS){

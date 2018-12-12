@@ -1,5 +1,7 @@
 package jb.djilink.mavlink
-
+/**
+ *Created by Jan Backhaus on 12.12.18 as part of the project android_dji_link.
+ */
 import jb.djilink.MAVLINK_IS_CONNECTED
 import jb.djilink.MainActivity
 import jb.djilink.udpIp
@@ -7,9 +9,7 @@ import jb.djilink.udpPort
 import java.net.DatagramSocket
 import java.net.InetAddress
 
-/**
- * Created by jan on 04.12.17.
- */
+
 class MavLinkConnection (var main: MainActivity){
 
 

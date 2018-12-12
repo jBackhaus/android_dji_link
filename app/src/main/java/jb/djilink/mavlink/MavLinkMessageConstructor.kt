@@ -1,5 +1,7 @@
 package jb.djilink.mavlink
-
+/**
+ *Created by Jan Backhaus on 12.12.18 as part of the project android_dji_link.
+ */
 import android.os.Handler
 import android.os.HandlerThread
 import com.MAVLink.Messages.MAVLinkMessage
@@ -8,9 +10,7 @@ import java.nio.charset.Charset
 import kotlin.math.PI
 
 
-/**
- * Created by jan on 23.11.17.
- */
+
 class MavLinkMessageConstructor(var mavLink: MavLinkConnection): HandlerThread("MavLinkMessageConstructor") {
 
         //Thread zum konstruieren von MAVLink-Nachrichten. Erzeugt Nachtichten des entsprechenden Namens, füllt PAYLOAD mit den übergebenen Parameteren und übergibt an UDPSenderThread zum Senden

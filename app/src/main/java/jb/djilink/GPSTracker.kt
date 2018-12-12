@@ -1,7 +1,7 @@
 package jb.djilink
 
 /**
- * Created by jan on 19.09.17.
+ *Created by Jan Backhaus on 12.12.18 as part of the project android_dji_link.
  */
 import android.content.Context
 import android.location.Location
