@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:weightSum="100">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:custom="http://schemas.android.com/apk/res-auto">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <fragment
+                android:id="@+id/mapFragment"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="25dp"
+                android:layout_weight="50" />
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="50">
+
+                <TextView
+                    android:id="@+id/ConnectStatusTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="25dp"
+                    android:background="@android:color/darker_gray"
+                    android:text="SimulatorDemo"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:id="@+id/mavtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ConnectStatusTextView"
+                    android:text="DJI-SDK-Bildübertragung"/>
+
+                <TextView
+                    android:id="@+id/pending_images"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@id/mavtitle"
+                    android:layout_marginTop="5dp"
+                    android:text="Wartende Bilder: " />
+
+                <TextView
+                    android:id="@+id/pending"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/pending_images"
+                    android:layout_below="@id/mavtitle"
+                    android:layout_marginTop="5dp"
+                    android:text="0" />
+
+                <TextView
+                    android:id="@+id/rateView"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@id/mavtitle"
+                    android:layout_marginTop="5dp"
+                    android:visibility="invisible" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/mavtitle"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/pending"
+                    android:layout_toStartOf="@id/rateView"
+                    android:visibility="invisible" />
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_below="@id/progressBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@android:color/darker_gray"/>
+
+                <TextView
+                    android:id="@+id/smbtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/divider"
+                    android:text="TCP-Image-Transfer"/>
+
+                <TextView
+                    android:id="@+id/smbpending_images"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@id/smbtitle"
+                    android:layout_marginTop="5dp"
+                    android:text="Wartende Bilder: " />
+
+                <TextView
+                    android:id="@+id/smbpending"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/pending_images"
+                    android:layout_below="@id/smbtitle"
+                    android:layout_marginTop="5dp"
+                    android:text="0" />
+
+                <TextView
+                    android:id="@+id/smbrateView"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@id/smbtitle"
+                    android:layout_marginTop="5dp"
+                    android:visibility="invisible" />
+
+                <ProgressBar
+                    android:id="@+id/smbprogressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/divider"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/pending"
+                    android:layout_toStartOf="@id/rateView"
+                    android:visibility="invisible" />
+
+
+
+
+
+                <Button
+                    android:id="@+id/btn_take_photo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/smbpending_images"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="0dp"
+                    android:text="Take single Photo" />
+
+
+                <Button
+                    android:id="@+id/btn_reset_gps"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/btn_take_photo"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_toEndOf="@+id/dbg"
+                    android:text="Reload GUI" />
+
+                <Button
+                    android:id="@+id/dbg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/btn_take_photo"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_toEndOf="@+id/btn_take_photo"
+                    android:text="DBG" />
+
+                <Button
+                    android:id="@+id/btn_settings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/btn_take_photo"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_toEndOf="@+id/btn_reset_gps"
+                    android:text="Settings" />
+
+                <TextView
+                    android:id="@+id/uploadProgressText"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@id/btn_take_photo"
+                    android:layout_marginTop="10dp"
+                    android:visibility="invisible" />
+
+                <ProgressBar
+                    android:id="@+id/uploadProgressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@id/btn_take_photo"
+                    android:layout_marginTop="10dp"
+                    android:layout_toStartOf="@id/uploadProgressText"
+                    android:visibility="invisible" />
+
+
+
+                <Button
+                    android:id="@+id/btn_panic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:text="PANIC: SHOW FPV"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/textView2"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/uploadProgressBar"
+                    android:visibility="visible"
+                    android:scrollbars="vertical"/>
+
+                <android.support.percent.PercentRelativeLayout
+                    android:id="@+id/videoLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/btn_take_photo"
+                    android:visibility="gone">
+
+                    <TextureView
+                        android:id="@+id/videoViewer"
+                        android:layout_alignParentBottom="true"
+                        android:background="@android:color/darker_gray"
+                        android:scaleType="centerCrop"
+                        app:layout_aspectRatio="178%"
+                        app:layout_widthPercent="100%" />
+                </android.support.percent.PercentRelativeLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/signal"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="@color/dark_gray"
+            android:orientation="horizontal">
+
+            <dji.ui.widget.PreFlightStatusWidget
+                android:id="@+id/status"
+                android:layout_width="238dp"
+                android:layout_height="25dp" />
+
+            <dji.ui.widget.FlightModeWidget
+                android:id="@+id/flightMode"
+                android:layout_width="103dp"
+                android:layout_height="22dp" />
+
+            <dji.ui.widget.GPSSignalWidget
+                android:layout_width="44dp"
+                android:layout_height="22dp" />
+
+            <dji.ui.widget.VisionWidget
+                android:layout_width="22dp"
+                android:layout_height="22dp" />
+
+            <dji.ui.widget.RemoteControlSignalWidget
+                android:layout_width="38dp"
+                android:layout_height="22dp" />
+
+            <dji.ui.widget.VideoSignalWidget
+                android:layout_width="38dp"
+                android:layout_height="22dp" />
+
+            <dji.ui.widget.WiFiSignalWidget
+                android:layout_width="22dp"
+                android:layout_height="20dp" />
+
+            <dji.ui.widget.BatteryWidget
+                android:layout_width="80dp"
+                android:layout_height="22dp" />
+
+            <dji.ui.widget.ConnectionWidget
+                android:layout_width="22dp"
+                android:layout_height="22dp" />
+        </LinearLayout>
+
+        <dji.ui.widget.RemainingFlightTimeWidget
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="18dp"
+        android:layout_width="match_parent"
+        android:background="@color/transparent"
+        android:layout_height="20dp"/>
+
+        <dji.ui.widget.compass.CompassCalibratingWorkFlow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </dji.ui.widget.compass.CompassCalibratingWorkFlow>
+
+        <!--Take off and return home buttons on left -->
+        <LinearLayout
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="12dp"
+            android:orientation="vertical">
+
+            <dji.ui.widget.TakeOffWidget
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="12dp"/>
+
+            <dji.ui.widget.ReturnHomeWidget
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="12dp"/>
+        </LinearLayout>
+
+        <!-- Pre-flight checklist panel -->
+        <dji.ui.panel.PreFlightCheckListPanel
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/signal"
+            custom:excludeItem="aircraftBatteryTemperature|ESCStatus"
+            android:visibility="gone">
+
+        </dji.ui.panel.PreFlightCheckListPanel>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+            <dji.ui.widget.dashboard.DashboardWidget
+                android:id="@+id/Compass"
+                android:layout_width="405dp"
+                android:layout_height="91dp"
+                android:layout_marginRight="12dp"
+                tools:ignore="RtlHardcoded" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>
